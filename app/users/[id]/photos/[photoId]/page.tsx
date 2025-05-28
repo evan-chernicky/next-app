@@ -1,7 +1,12 @@
 import React from 'react'
 
+interface Params {
+  id: number,
+  photoId: number
+}
+
 interface Props {
-    params: { id: number; photoId: number}
+    params: Promise<Params>
 }
 
 const PhotoDetailPage = async ({params}: Props) => {

@@ -1,7 +1,11 @@
 import React from 'react'
 
+interface Params {
+  id: number
+}
+
 interface Props {
-    params: { id: number}
+    params: Promise<Params>
 }
 
 const UserDetailPage = async ({params}: Props) => {

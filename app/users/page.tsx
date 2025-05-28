@@ -1,8 +1,12 @@
 import React from 'react'
 import UserTable from './UserTable'
 
+interface Params {
+  sortOrder: string
+}
+
 interface Props {
-  searchParams: {sortOrder: string}
+  searchParams: Promise<Params>
 }
 
 const UsersPage = async ({searchParams}: Props) => {
